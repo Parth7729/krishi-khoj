@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Add Tractor{% endblock %}
+
+{% block body %}
+    <!-- <h1>{{ tractor.model }}</h1>
+    <h1>{{ tractor.implements }}</h1>
+    <h1>{{ tractor.color }}</h1> -->
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Owner</th>
+            <td>{{ tractor.user.name }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Model</th>
+            <td>{{ tractor.model }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Color</th>
+            <td>{{ tractor.color }}</td>
+          </tr>
+          </tr>
+          <tr>
+            <th scope="row">Implements</th>
+            <td>{{ tractor.implements }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+{% endblock %}

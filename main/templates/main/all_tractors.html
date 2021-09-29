@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Add Tractor{% endblock %}
+
+{% block body %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">All Tractors</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for tractor in tractors %}
+
+        <tr>
+        <td><a href="{% url 'tractor_details' tractor.id %}">{{ tractor.model }}</a></td>
+        </tr>
+
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
